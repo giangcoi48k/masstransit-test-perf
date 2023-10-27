@@ -16,9 +16,9 @@ namespace MTPerfTest.BackgroundServices
         {
             await Task.Run(async () =>
             {
+                var tasks = new List<Task>();
                 while (true)
                 {
-                    var tasks = new List<Task>();
                     var seriesItem = new StockSeries
                     {
                         CeilingPrice = Random.Shared.Next(10000, 20000),
